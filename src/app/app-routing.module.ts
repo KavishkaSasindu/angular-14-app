@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'security', loadChildren: () => import('./modules/security/security.module').then(m => m.SecurityModule) },
   { path: 'starter', loadChildren: () => import('./modules/starter/starter.module').then(m => m.StarterModule) },
   { path: 'console', loadChildren: () => import('./modules/console/console.module').then(m => m.ConsoleModule) },
+  { path: 'shared', loadChildren: () => import('./modules/shared/shared.module').then(m => m.SharedModule) },
   {path:'**',component:NotFoundPageComponent}
 ];
 

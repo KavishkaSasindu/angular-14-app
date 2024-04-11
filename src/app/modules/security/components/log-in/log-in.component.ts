@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import { Router} from "@angular/router";
+import {AuthServiceService} from "../../../shared/services/auth-service.service";
 
 @Component({
   selector: 'app-log-in',
@@ -11,18 +12,26 @@ export class LogInComponent implements OnInit {
   email:string ="";
   password:string = "";
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private authService:AuthServiceService) { }
 
   ngOnInit(): void {
+
+    if(this.authService.isExistToken('my-token')){
+      this.router.navigateByUrl('/console').then(()=>{
+        console.log(true)
+      })
+    }
   }
 
   logIn(){
     console.log(this.email,this.password);
 
     if(this.email === 'h@gmail.com' && this.password === '123456'){
+      this.authService.createToken(this.email);
       this.router.navigateByUrl('/console').then(()=>{
-        alert("LogIn success")
-      })
+        alert("Successfully LogIn");
+      });
+
     }else{
       alert("Invalid Credentials")
     }
