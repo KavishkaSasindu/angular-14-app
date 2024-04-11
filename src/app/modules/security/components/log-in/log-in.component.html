@@ -1,1 +1,25 @@
-<p>log-in works!</p>
+<div class="logIn-form">
+  <div class="inner">
+    <form (ngSubmit)="logIn()">
+      <h2>SignIn Here</h2>
+      <div class="form-group">
+        <label for="username">
+            Email :
+        </label>
+        <br>
+        <input type="email" name="username" [(ngModel)]="email" id="username">
+      </div>
+      <div class="form-group">
+        <label for="password">
+          Password :
+        </label>
+        <br>
+        <input type="password" name="password" [(ngModel)]="password" id="password">
+      </div>
+      <div class="form-group-button">
+        <button>LogIn</button>
+        <a routerLink="/security/register">Don't you have an account?</a>
+      </div>
+    </form>
+  </div>
+</div>
