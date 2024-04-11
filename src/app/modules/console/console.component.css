@@ -1,0 +1,17 @@
+.inner{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer{
+  width: 90vw;
+  height: 87%;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}

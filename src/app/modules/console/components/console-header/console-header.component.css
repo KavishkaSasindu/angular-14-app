@@ -1,36 +1,46 @@
 .outer{
-  width: 100%;
+  width: 100vw;
   height: 60px;
-  background-color: #8e44ad;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #c0392b;
+  position: fixed;
+  top: 0;
 }
 
 .inner{
-  width: 90%;
+  width: 90vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.list{
+.list {
   width: 100%;
-  height: inherit;
+  height: 100%;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
-ul {
+h2{
+  font-size: 25px;
+  color: white;
+}
+
+ul{
   list-style: none;
   display: flex;
 }
 
-a{
-text-decoration: none;
-  color: white;
-  margin-left: 25px;
+li{
+  font-size: 20px;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
