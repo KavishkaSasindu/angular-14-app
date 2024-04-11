@@ -1,0 +1,17 @@
+.outer{
+  width: 100%;
+  height:70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8e44ad;
+  color: white;
+}
+
+.inner{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
